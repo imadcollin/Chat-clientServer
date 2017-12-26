@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84D8F7B31FF1DC1B004D0BAC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84D8F7B21FF1DC1B004D0BAC /* main.cpp */; };
+		84D8F7BB1FF1DD3B004D0BAC /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84D8F7B91FF1DD3B004D0BAC /* Client.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		84D8F7AF1FF1DC1B004D0BAC /* Chat-clientServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chat-clientServer"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D8F7B21FF1DC1B004D0BAC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		84D8F7B91FF1DD3B004D0BAC /* Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		84D8F7BA1FF1DD3B004D0BAC /* Client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Client.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				84D8F7B21FF1DC1B004D0BAC /* main.cpp */,
+				84D8F7B91FF1DD3B004D0BAC /* Client.cpp */,
+				84D8F7BA1FF1DD3B004D0BAC /* Client.hpp */,
 			);
 			path = "Chat-clientServer";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D8F7BB1FF1DD3B004D0BAC /* Client.cpp in Sources */,
 				84D8F7B31FF1DC1B004D0BAC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
