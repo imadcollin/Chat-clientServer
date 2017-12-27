@@ -24,7 +24,7 @@ using namespace std;
 #define DEFAULT_PORT "27015"
 #define IP_Address "172.0.0.1"
 
-
+//================Steps====================//
 //Bind the socket to an IP address
 
 //Listening
@@ -35,13 +35,11 @@ using namespace std;
 
 //Close the connection
 
-int ClientClass::fun(){
+ void ClientClass::fun(){
     int client;
     struct hostent *server;
     int portNum = 3000; // NOTE that the port number is same for both client and server
-    bool isExit = false;
     char buffer[256];
-    char* ip = "127.0.0.1";
     
     struct sockaddr_in server_addr;
     
@@ -55,15 +53,26 @@ int ClientClass::fun(){
         fprintf(stderr,"ERROR, no such host\n");
         exit(0);
     }
+    // AF_INET: address domain of the socket.
+    //  htons() converts the port number from host byte order
+    //  to a port number in network byte order.
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(portNum);
     
     /* ---------------- connect() ---------------- */
     if (connect(client,(struct sockaddr *)&server_addr, sizeof(server_addr)) == 0)
         cout << "=> Connection to the server port number: " << portNum << endl;
+
+    //Messaging
+    cin >> buffer;
+    int n = write(client, buffer, strlen(buffer));
+    if (n < 0)
+        cout<<"ERROR writing to socket"<<endl;
     
-    
+    n = read(client, buffer, 255);
+    if (n < 0)
+        cout<<"ERROR reading from socket"<<endl;
+    printf("%s\n", buffer);
     close(client);
-    return 0;
 }
 

@@ -15,6 +15,6 @@ public:
 
     ClientClass(){};
     ~ClientClass(){};
-    int fun();
+    void fun();
 };
 #endif /* Client_hpp */
