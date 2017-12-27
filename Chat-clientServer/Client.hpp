@@ -14,7 +14,7 @@ class ClientClass{
 public:
 
     ClientClass(){};
-    ClientClass(){};
+    ~ClientClass(){};
     int fun();
 };
 #endif /* Client_hpp */
